@@ -22,6 +22,7 @@
   <thead>
       <tr>
           <td>职位名称</td>
+          <td>职位类型</td>
           <td>薪资下限</td>
           <td>薪资上限</td>
           <td>发布时间</td>
@@ -33,6 +34,9 @@
       <tr>
           <td>
               <%= link_to(job.title, job_path(job)) %>
+          </td>
+          <td>
+              <%= job.job_type %>
           </td>
           <td>
               <%= job.wage_lower_bound %>
