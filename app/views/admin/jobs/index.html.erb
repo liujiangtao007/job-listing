@@ -1,5 +1,5 @@
 <div class="pull-right">
-  <%= link_to("Add a job", new_admin_job_path, :class => "btn btn-default" ) %>
+  <%= link_to("发布职位", new_admin_job_path, :class => "btn btn-success" ) %>
 </div>
 
 <br><br>
@@ -7,27 +7,13 @@
 <table class="table table-boldered table-striped custab">
   <thead>
       <tr>
-          <td>
-            职位名称
-          </td>
-          <td>
-            职位类型
-          </td>
-          <td>
-            收到简历数量
-          </td>
-          <td>
-            薪资下限
-          </td>
-          <td>
-            薪资上限
-          </td>
-          <td>
-            管理选项
-          </td>
-          <td>
-            发布时间
-          </td>
+          <td>职位名称</td>
+          <td>职位类型</td>
+          <td>收到简历数量</td>
+          <td>薪资下限</td>
+          <td>薪资上限</td>
+          <td>管理选项</td>
+          <td>发布时间</td>
       </tr>
   </thead>
 
@@ -59,7 +45,7 @@
 
     </td>
     <td>
-      <%= job.created_at %>
+      <%= local_time(job.created_at, '%B %e, %Y %l:%M%p') %>
     </td>
   </tr>
   <% end %>
